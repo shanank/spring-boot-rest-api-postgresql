@@ -17,12 +17,11 @@ public class PersonService {
     private PersonDao personDao;
 
     @Autowired
-    public PersonService(@Qualifier("fakeDao") PersonDao personDao) {
+    public PersonService(@Qualifier("postgreSql") PersonDao personDao) {
         this.personDao = personDao;
     }
 
     public int addPerson(Person person) {
-
         return personDao.insertPerson(person);
     }
 
@@ -31,7 +30,6 @@ public class PersonService {
     }
 
     public Person getPersonById(UUID personId) {
-
         Optional<Person>  optionalPerson = personDao.getPersonById(personId);
         return optionalPerson.orElse(null);
     }
@@ -39,7 +37,6 @@ public class PersonService {
     public int removePerson(UUID personId) {
         return personDao.removePerson(personId);
     }
-
 
     public int updatePerson(UUID personId, Person person) {
         return personDao.updatePerson(personId, person);
