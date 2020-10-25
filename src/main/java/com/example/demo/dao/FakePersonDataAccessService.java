@@ -10,7 +10,9 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-
+/**
+ * This is Fake DB implementation Service class where in a List serve as a DB instance
+ */
 @Repository("fakeDao")
 public class FakePersonDataAccessService implements PersonDao {
 
