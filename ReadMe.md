@@ -1,5 +1,5 @@
 
-## This is a maven spring boot application
+## This is a maven spring boot application with an integration to postgreSql DB
 
 #### Maven Commands
 * To clean build the app - mvn clean build
