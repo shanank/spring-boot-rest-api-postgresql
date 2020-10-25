@@ -1,6 +1,10 @@
 
-## A sample spring boot application based on maven
+## This is a maven spring boot application
 
-### Maven Commands
-* To clean and build the app - mvn clean build
+#### Maven Commands
+* To clean build the app - mvn clean build
+* To create jar - mvn package
 * To run the app - mvn spring-boot:run
+
+#### Access Swagger UI
+* Goto - http://localhost:8080/swagger-ui.html
