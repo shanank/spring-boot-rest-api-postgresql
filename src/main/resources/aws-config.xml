@@ -1,0 +1,19 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aws-messaging="http://www.springframework.org/schema/cloud/aws/messaging"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd
+	   					   http://www.springframework.org/schema/mvc
+	   					   http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	   					   http://www.springframework.org/schema/cloud/aws/messaging
+	   					   http://www.springframework.org/schema/cloud/aws/messaging/spring-cloud-aws-messaging.xsd">
+
+    <mvc:annotation-driven>
+        <mvc:argument-resolvers>
+            <ref bean="notificationResolver" />
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
+	    //Adding comments here
+    <aws-messaging:notification-argument-resolver id="notificationResolver" />
+</beans>
