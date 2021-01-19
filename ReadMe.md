@@ -6,5 +6,5 @@
 * To create jar - mvn package
 * To run the app - mvn spring-boot:run
 
-#### Access Swagger UI
+#### Swagger UI
 * Goto - http://localhost:8080/swagger-ui.html
